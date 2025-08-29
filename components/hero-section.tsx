@@ -582,7 +582,10 @@ export function HeroSection() {
 
       <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
         <Link
-          href="https://hubvestor-platform-2.vercel.app/auth/sign-up"
+          href={
+            process.env.NEXT_PUBLIC_HUBVESTOR_PLATFORM_URL + "/auth/sign-up" ||
+            ""
+          }
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -591,7 +594,9 @@ export function HeroSection() {
           </Button>
         </Link>
         <Link
-          href="https://hubvestor-platform-2.vercel.app/auth/login"
+          href={
+            process.env.NEXT_PUBLIC_HUBVESTOR_PLATFORM_URL + "/auth/login" || ""
+          }
           target="_blank"
           rel="noopener noreferrer"
         >
